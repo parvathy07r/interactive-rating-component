@@ -70,3 +70,29 @@ h2 {
 .btn:focus {
     background-color: white;
 }
+
+.main {
+    background-color: hsl(213, 19%, 18%) ;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 335px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 0px;
+}
+
+.rating {
+    border: none;
+    border-radius: 10px;
+    background-color: hsl(216, 12%, 8%);
+    color: orange;
+    padding: 8px;
+}
