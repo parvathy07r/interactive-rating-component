@@ -15,7 +15,8 @@ document.querySelector('.button-style').addEventListener('click', handleButton);
 function handleButton() {
     const secondDiv = document.getElementById('main');
     const firstDiv = document.getElementById('wrapper');
-    if (secondDiv.style.display === "none") {
+    const secondDivComputedStyle = window.getComputedStyle(secondDiv);
+    if (secondDivComputedStyle.display === "none") {
         secondDiv.style.display = "inline-flex";
         firstDiv.style.display = "none";
     } else {
