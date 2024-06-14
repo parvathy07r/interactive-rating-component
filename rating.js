@@ -16,18 +16,47 @@ function handleButton() {
     const secondDiv = document.getElementById('main');
     const firstDiv = document.getElementById('wrapper');
     const secondDivComputedStyle = window.getComputedStyle(secondDiv);
-    if (secondDivComputedStyle.display === "none") {
-        secondDiv.style.display = "inline-flex";
-        firstDiv.style.display = "none";
-    } else {
-        secondDiv.style.display = "none";
+
+
+
+    let rate = rating;
+
+
+    if (!rate) {
+        const submit = document.querySelector('.btn-style');
+        submit.innerText = "";
+        const node = document.createElement("p");
+        const textNode = document.createTextNode(`Please select the rating`);
+        node.appendChild(textNode);
+        document.querySelector('.btn-style').appendChild(node);
+        return;
+
     }
+    if (rate) {
+
+        if (secondDivComputedStyle.display === "none") {
+            secondDiv.style.display = "inline-flex";
+            firstDiv.style.display = "none";
+        } else {
+            secondDiv.style.display = "none";
+        }
+
+
+
+
+    }
+
+
 }
 
+
 function action(rating) {
+
+
     const node = document.createElement("p");
     const textNode = document.createTextNode(`You selected ${rating} out of 5`);
     node.appendChild(textNode);
     document.getElementById('rating').appendChild(node);
+
 }
 
