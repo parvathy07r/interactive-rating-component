@@ -23,12 +23,11 @@ function handleButton() {
 
 
     if (!rate) {
-        const submit = document.querySelector('.btn-style');
-        submit.innerText = "";
+       // const submit = document.querySelector('.btn-style');
         const node = document.createElement("p");
-        const textNode = document.createTextNode(`Please select the rating`);
+        const textNode = document.createTextNode(`PLEASE SELECT THE RATING!!!!`);
         node.appendChild(textNode);
-        document.querySelector('.btn-style').appendChild(node);
+        document.querySelector('.error-style').appendChild(node);
         return;
 
     }
