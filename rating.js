@@ -23,14 +23,20 @@ function handleButton() {
 
 
     if (!rate) {
-       // const submit = document.querySelector('.btn-style');
-        const node = document.createElement("p");
+
+        const errorStyle = document.querySelector('.error-style');
+        const node = document.createElement("div");
         const textNode = document.createTextNode(`PLEASE SELECT THE RATING!!!!`);
         node.appendChild(textNode);
-        document.querySelector('.error-style').appendChild(node);
+        node.style.textAlign = "center";
+        node.style.color = "red";
+        node.style.paddingTop = "16px"
+        errorStyle.appendChild(node);        
         return;
-
     }
+
+
+
     if (rate) {
 
         if (secondDivComputedStyle.display === "none") {
